@@ -6,19 +6,17 @@ Dates
     Class Dates
     Date and time related utility functions
 
-    ## today()
+    ## today
 
-        ```
-        $today = Dates::today();
-        ```
+        .. code-block:: php
+            $today = Dates::today();
 
-        Returns today's date as a DateTime object
 
-        `See <https://phpf1.com/snippet/get-actual-date-in-php>`_
+        Returns today's date as a DateTime object. `Source <https://phpf1.com/snippet/get-actual-date-in-php>`_
 
         :returns: DateTime
 
-    ## todayAsString($pattern = 'Y-m-d')
+    ## todayAsString
 
         ```
         $today = Dates::todayAsString();
@@ -28,10 +26,10 @@ Dates
         By default it returns the date in ISO format
         The output format can be changed by the $pattern parameter
 
-        `See <https://phpf1.com/snippet/get-actual-date-in-php>`_
+        .. seealso::
+        `Get actual date <https://phpf1.com/snippet/get-actual-date-in-php>`_
 
-        :type $pattern: string
-        :param $pattern: Date formatting pattern
+        :$pattern: Date formatting pattern
         :returns: string
 
 
