@@ -1,0 +1,24 @@
+{
+    "name"              : "phpf1/utils",
+    "type"              : "library",
+    "description"       : "Snippet collection for everyday PHP development",
+    "license"           : "MIT",
+    "keywords"          : ["helper", "utility", "utils", "date", "string", "array", "file"],
+
+    "authors"           : [
+        {
+            "name"  : "PHP F1",
+            "email" : "info@phpf1.com",
+            "role"  : "lead"
+        },
+    ],
+
+    "require"           : {
+        "php"          : ">=7.2",
+        "ext-posix"    : "*",
+        "ext-mbstring" : "*",
+        "ext-gd"       : "*",
+        "ext-filter"   : "*",
+        "ext-dom"      : "*"
+    },
+}
