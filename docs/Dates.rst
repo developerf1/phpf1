@@ -2,9 +2,7 @@
 Dates
 -------------------
 
-
-Class Dates
-Date and time related utility functions
+Date and time related utility functions.
 
 today
 =====
