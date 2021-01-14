@@ -180,3 +180,29 @@ dateToTimestamp
     :type $dateStr: string
     :param $dateStr:
     :returns: int
+
+getTimeDifferenceInMinutes
+==========================
+
+    Syntax::
+
+        $diffInMinutes = Dates::getTimeDifferenceInMinutes($startTime, $endTime);
+
+    Gets the difference between two date times in minutes. `Source <https://phpf1.com/snippet/get-time-difference-in-minutes-in-php>`_
+
+    :type $startTime: string
+    :param $startTime:
+    :type $endTime: string
+    :param $endTime:
+    :returns: int
+
+getNexWeekDay
+=============
+
+    Syntax::
+
+        $day = Dates::getNexWeekDay();
+
+    Returns the date one week from now. `Source <https://phpf1.com/snippet/get-same-day-in-the-next-week-in-php>`_
+
+    :returns: DateTime

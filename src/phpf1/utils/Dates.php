@@ -218,4 +218,41 @@ class Dates
 
         return $date->getTimestamp();
     }
+
+    /**
+     * Gets the difference between two date times in minutes
+     *
+     * @see https://phpf1.com/snippet/get-time-difference-in-minutes-in-php
+     *
+     * @param $startTime
+     * @param $endTime
+     * @return int
+     * @throws Exception
+     */
+    public static function getTimeDifferenceInMinutes($startTime, $endTime) : int
+    {
+        $start = new DateTime($startTime);
+        $end = new DateTime($endTime);
+
+        $diff = $end->diff($start);
+
+        $days = $diff->format('%a');
+        $hours = $diff->format('%h');
+        $minutes = $diff->format('%i');
+
+        return (int)($days * 24 *60) + (int)($hours * 60) + (int)($minutes);
+    }
+
+    /**
+     * Returns the date one week from now
+     *
+     * @see https://phpf1.com/snippet/get-same-day-in-the-next-week-in-php
+     *
+     * @return DateTime
+     */
+    public static function getNexWeekDay() : DateTime
+    {
+        $today = new DateTime();
+        return $today->add(new DateInterval('P1W'));
+    }
 }
