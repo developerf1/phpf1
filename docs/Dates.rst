@@ -111,3 +111,72 @@ differenceInDaysFromString
     :type $endDate: string
     :param $endDate:
     :returns: string
+
+addDaysToDate
+=============
+
+    Syntax::
+
+        $newDate = Dates::addDaysToDate(string $originalDate, int $days);
+
+    Adds days to the original date and returns the new date as a DateTime object. `Source <https://phpf1.com/snippet/add-days-to-date-in-php>`_
+
+    :type $originalDate: string
+    :param $originalDate:
+    :type $days: int
+    :param $days:
+    :returns: DateTime
+
+addMinutesToTime
+================
+
+    Syntax::
+
+        $newTime = Dates::addMinutesToTime(string $originalTime, int $minutes);
+
+    Adds minutes to the original time and returns the new time as a DateTime object. `Source <https://phpf1.com/snippet/add-minutes-to-date-time-in-php>`_
+
+    :type $originalTime: string
+    :param $originalTime:
+    :type $minutes: int
+    :param $minutes:
+    :returns: DateTime
+
+getLastDayOfMonth
+=================
+
+    Syntax::
+
+        $newTime = Dates::getLastDayOfMonth(string $actualDate);
+
+    Returns the last day of the month based on the specified date. `Source <https://phpf1.com/snippet/get-the-last-day-of-a-month-from-date-in-php>`_
+
+    :type $actualDate: string
+    :param $actualDate:
+    :returns: DateTime
+
+timestampToDateTime
+===================
+
+    Syntax::
+
+        $date = Dates::timestampToDateTime(int $timestamp);
+
+    Converts the given Unix timestamp to a DateTime object. `Source <https://phpf1.com/snippet/convert-timestamp-to-datetime-in-php>`_
+
+    :type $timestamp: int
+    :param $timestamp:
+    :returns: DateTime
+
+dateToTimestamp
+===============
+
+    Syntax::
+
+        $timestamp = Dates::dateToTimestamp(string $dateStr);
+
+    Returns the Unix timestamp representation of a given date. `Source <https://phpf1.com/snippet/convert-date-to-timestamp-in-php>`_
+
+    :type $dateStr: string
+    :param $dateStr:
+    :returns: int

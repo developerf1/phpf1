@@ -11,6 +11,7 @@
 
 namespace phpf1\utils;
 
+use DateInterval;
 use DateTime;
 use Exception;
 
@@ -135,5 +136,86 @@ class Dates
     public static function differenceInDaysFromString(string $startDate, string $endDate)
     {
         return self::differenceInDays(new DateTime($startDate), new DateTime($endDate));
+    }
+
+    /**
+     * Adds days to the original date and returns the new date as a DateTime object
+     *
+     * @see https://phpf1.com/snippet/add-days-to-date-in-php
+     *
+     * @param string $originalDate
+     * @param int $days
+     * @return DateTime
+     * @throws Exception
+     */
+    public static function addDaysToDate(string $originalDate, int $days) : DateTime
+    {
+        $date = new DateTime($originalDate);
+        $date->add(new DateInterval("P${days}D"));
+        return $date;
+    }
+
+    /**
+     * Adds minutes to the original time and returns the new time as a DateTime object
+     *
+     * @see https://phpf1.com/snippet/add-minutes-to-date-time-in-php
+     *
+     * @param string $originalTime
+     * @param int $minutes
+     * @return DateTime
+     * @throws Exception
+     */
+    public static function addMinutesToTime(string $originalTime, int $minutes) : DateTime
+    {
+        $time = new DateTime($originalTime);
+        $time->add(new DateInterval("PT${minutes}M"));
+        return $time;
+    }
+
+    /**
+     * Returns the last day of the month based on the specified date
+     *
+     * @see https://phpf1.com/snippet/get-the-last-day-of-a-month-from-date-in-php
+     * @param string $actualDate
+     * @return DateTime
+     * @throws Exception
+     */
+    public static function getLastDayOfMonth(string $actualDate) : DateTime
+    {
+        $date = new DateTime($actualDate);
+        return new DateTime($date->format('Y-m-t'));
+    }
+
+
+    /**
+     * Converts the given Unix timestamp to a DateTime object
+     *
+     * @see https://phpf1.com/snippet/convert-timestamp-to-datetime-in-php
+     *
+     * @param int $timestamp
+     * @return DateTime
+     */
+    public static function timestampToDateTime(int $timestamp) : DateTime
+    {
+        $date = new DateTime();
+        $date->setTimestamp($timestamp);
+
+        return $date;
+    }
+
+    /**
+     * Returns the Unix timestamp representation of a given date
+     *
+     * @see https://phpf1.com/snippet/convert-date-to-timestamp-in-php
+     *
+     * @param string $dateStr
+     * @return int
+     * @throws Exception
+     */
+    public static function dateToTimestamp(string $dateStr) : int
+    {
+        $date = new DateTime($dateStr);
+
+        return $date->getTimestamp();
     }
 }
