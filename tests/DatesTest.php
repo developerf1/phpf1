@@ -61,4 +61,23 @@ class DatesTest extends TestCase
         self::assertEquals(1565740800, $unixTimestamp);
     }
 
+    public function test_getTimeDifferenceInMinutes()
+    {
+        $diff = Dates::getTimeDifferenceInMinutes('2020-10-13 12:24', '2020-10-13 18:36');
+
+        self::assertEquals(372, $diff);
+
+    }
+
+    public function test_getNexWeekDay()
+    {
+        $today = new DateTime();
+        $nextWeek = $today->add(new DateInterval('P1W'));
+
+        $nextWeekDay = Dates::getNexWeekDay();
+
+        self::assertEquals( $nextWeek->format('Y-m-d'), $nextWeekDay->format('Y-m-d'));
+
+    }
+
 }
