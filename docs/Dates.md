@@ -6,18 +6,18 @@ Date and time related utility functions.
 
 Returns today's date as a DateTime object. [Source](https://phpf1.com/snippet/get-actual-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function Dates::today() : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 None
  
-#### Returns: 
+**Returns:** 
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $today = Dates::today();
 ```
@@ -29,18 +29,18 @@ $today = Dates::today();
 Returns today's date as string. By default, it returns the date in ISO format. 
 The output format can be changed by the `$pattern` parameter. [Source](https://phpf1.com/snippet/get-actual-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function todayAsString($pattern = 'Y-m-d') : string
 ```
 
-#### Parameters:
+**Parameters:**
 `$pattern`: How to format the output string. The default value is `Y-m-d` 
 
-#### Returns:
+**Returns:**
 `string`
 
-#### Example:
+**Example:**
 ```php
 $today = Dates::todayAsString();
 ```
@@ -51,18 +51,18 @@ $today = Dates::todayAsString();
 
 Returns yesterday's date as a DateTime object. [Source](https://phpf1.com/snippet/get-yesterdays-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function yesterday() : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 None
 
-#### Returns:
+**Returns:**
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $yesterday = Dates::yesterday();
 ```
@@ -74,18 +74,18 @@ $yesterday = Dates::yesterday();
 Returns yesterday's date as string. By default, it returns the date in ISO format.
 The output format can be changed by the `$pattern` parameter. [Source](https://phpf1.com/snippet/get-yesterdays-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function yesterdayAsString($pattern = 'Y-m-d')
 ```
 
-#### Parameters:
+**Parameters:**
 `$pattern` : How to format the output string. The default value is `Y-m-d`
 
-#### Returns:
+**Returns:**
 `string`
 
-#### Example:
+**Example:**
 ```php
 $yesterday = Dates::yesterdayAsString();
 ```
@@ -96,18 +96,18 @@ $yesterday = Dates::yesterdayAsString();
 
 Returns tomorrow's date as a DateTime object. [Source](https://phpf1.com/snippet/get-tomorrows-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function tomorrow() : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 None
 
-#### Returns:
+**Returns:**
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $tomorrow = Dates::tomorrow();
 ```
@@ -119,18 +119,18 @@ $tomorrow = Dates::tomorrow();
 Returns tomorrow's date as string. By default, it returns the date in ISO format.
 The output format can be changed by the `$pattern` parameter. [Source](https://phpf1.com/snippet/get-tomorrows-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function tomorrowAsString($pattern = 'Y-m-d')
 ```
 
-#### Parameters:
+**Parameters:**
 `$pattern` : How to format the output string. The default value is `Y-m-d`
 
-#### Returns:
+**Returns:**
 `string`
 
-#### Example:
+**Example:**
 ```php
 $tomorrow = Dates::tomorrowAsString();
 ```
@@ -141,20 +141,20 @@ $tomorrow = Dates::tomorrowAsString();
 
 Returns the difference in days between two dates. [Source](https://phpf1.com/snippet/get-the-number-of-days-between-two-dates-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function differenceInDays(DateTime $startDate, DateTime $endDate) : int
 ```
 
-#### Parameters:
+**Parameters:**
 `$startDate` : The first date
 
 `$endDate` : The second date
 
-#### Returns:
+**Returns:**
 `int`
 
-#### Example:
+**Example:**
 ```php
 $day1 = new DateTime('2020-10-17');
 $day2 = new DateTime('2020-11-03');
@@ -168,20 +168,20 @@ $diff = Dates::differenceInDays($day1, $day2);
 
 Returns the difference in days between two dates that are defined as strings. [Source](https://phpf1.com/snippet/get-the-number-of-days-between-two-dates-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function differenceInDaysFromString(string $startDate, string $endDate) : int
 ```
 
-#### Parameters:
+**Parameters:**
 `$startDate` : The first date as string
 
 `$endDate` : The second date as string
 
-#### Returns:
+**Returns:**
 `int`
 
-#### Example:
+**Example:**
 ```php
 $diff = Dates::differenceInDays('2020-10-17', '2020-11-03');
 ```
@@ -192,20 +192,20 @@ $diff = Dates::differenceInDays('2020-10-17', '2020-11-03');
 
 Adds days to the original date and returns the new date as a DateTime object. [Source](https://phpf1.com/snippet/add-days-to-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function addDaysToDate(string $originalDate, int $days) : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 `$originalDate` : The base date as string
 
 `$days` : Number of days to add
 
-#### Returns:
+**Returns:**
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $newDate = Dates::addDaysToDate('2020-10-17', 17);
 ```
@@ -216,20 +216,20 @@ $newDate = Dates::addDaysToDate('2020-10-17', 17);
 
 Adds minutes to the original time and returns the new time as a DateTime object. [Source](https://phpf1.com/snippet/add-minutes-to-date-time-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function addMinutesToTime(string $originalTime, int $minutes) : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 `$originalDate` : The base time as string
 
 `$minutes` : Number of minutes to add
 
-#### Returns:
+**Returns:**
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $newTime = Dates::addMinutesToTime('2020-10-17 13:28', 48);
 ```
@@ -240,18 +240,18 @@ $newTime = Dates::addMinutesToTime('2020-10-17 13:28', 48);
 
 Returns the last day of the month based on the specified date. [Source](https://phpf1.com/snippet/get-the-last-day-of-a-month-from-date-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function getLastDayOfMonth(string $actualDate) : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 `$actualDate` : The actual date as string
 
-#### Returns:
+**Returns:**
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $lastDay = Dates::getLastDayOfMonth('2020-10-17');
 ```
@@ -262,18 +262,18 @@ $lastDay = Dates::getLastDayOfMonth('2020-10-17');
 
 Converts the given Unix timestamp to a DateTime object. [Source](https://phpf1.com/snippet/convert-timestamp-to-datetime-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function timestampToDateTime(int $timestamp) : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 `$timestamp` : The Unix timestamp to convert
 
-#### Returns:
+**Returns:**
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $date = Dates::timestampToDateTime(1565740800);
 ```
@@ -284,18 +284,18 @@ $date = Dates::timestampToDateTime(1565740800);
 
 Returns the Unix timestamp representation of a given date. [Source](https://phpf1.com/snippet/convert-date-to-timestamp-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function dateToTimestamp(string $dateStr) : int
 ```
 
-#### Parameters:
+**Parameters:**
 `$dateStr` : The date in string format to convert
 
-#### Returns:
+**Returns:**
 `int`
 
-#### Example:
+**Example:**
 ```php
 $unixTimestamp = Dates::dateToTimestamp('2019-08-14');
 ```
@@ -306,20 +306,20 @@ $unixTimestamp = Dates::dateToTimestamp('2019-08-14');
 
 Gets the difference between two date times in minutes. [Source](https://phpf1.com/snippet/get-time-difference-in-minutes-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function getTimeDifferenceInMinutes(string $startTime, string $endTime) : int
 ```
 
-#### Parameters:
+**Parameters:**
 `$startTime` : The start time in string format
 
 `$endTime` : The end time in string format
 
-#### Returns:
+**Returns:**
 `int`
 
-#### Example:
+**Example:**
 ```php
 $diff = Dates::getTimeDifferenceInMinutes('2020-10-13 12:24', '2020-10-13 18:36');
 ```
@@ -330,18 +330,18 @@ $diff = Dates::getTimeDifferenceInMinutes('2020-10-13 12:24', '2020-10-13 18:36'
 
 Returns the date one week from now. [Source](https://phpf1.com/snippet/get-same-day-in-the-next-week-in-php)
 
-#### Syntax:
+**Syntax:**
 ```php
 public static function getDayOneWeekFromNow() : DateTime
 ```
 
-#### Parameters:
+**Parameters:**
 None
 
-#### Returns:
+**Returns:**
 `DateTime`
 
-#### Example:
+**Example:**
 ```php
 $nextWeekDay = Dates::getDayOneWeekFromNow();
 ```
