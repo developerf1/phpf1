@@ -116,10 +116,10 @@ class Dates
      * @param DateTime $endDate
      * @return string
      */
-    public static function differenceInDays(DateTime $startDate, DateTime $endDate)
+    public static function differenceInDays(DateTime $startDate, DateTime $endDate) : int
     {
         $difference = $endDate->diff($startDate);
-        return $difference->format("%a");
+        return (int)$difference->format("%a");
     }
 
 
@@ -250,7 +250,7 @@ class Dates
      *
      * @return DateTime
      */
-    public static function getNexWeekDay() : DateTime
+    public static function getDayOneWeekFromNow() : DateTime
     {
         $today = new DateTime();
         return $today->add(new DateInterval('P1W'));

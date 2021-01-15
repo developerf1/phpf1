@@ -69,15 +69,26 @@ class DatesTest extends TestCase
 
     }
 
-    public function test_getNexWeekDay()
+    public function test_getDayOneWeekFromNow()
     {
         $today = new DateTime();
         $nextWeek = $today->add(new DateInterval('P1W'));
 
-        $nextWeekDay = Dates::getNexWeekDay();
+        $nextWeekDay = Dates::getDayOneWeekFromNow();
 
         self::assertEquals( $nextWeek->format('Y-m-d'), $nextWeekDay->format('Y-m-d'));
 
+    }
+
+    public function test_differenceInDays()
+    {
+        $day1 = new DateTime('2020-10-17');
+        $day2 = new DateTime('2020-11-03');
+
+        $diff = Dates::differenceInDays($day1, $day2);
+
+        self::assertIsNumeric($diff);
+        self::assertEquals(17, $diff);
     }
 
 }

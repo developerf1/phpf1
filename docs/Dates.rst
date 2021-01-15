@@ -196,12 +196,12 @@ getTimeDifferenceInMinutes
     :param $endTime:
     :returns: int
 
-getNexWeekDay
-=============
+getDayOneWeekFromNow
+====================
 
     Syntax::
 
-        $day = Dates::getNexWeekDay();
+        $day = Dates::getDayOneWeekFromNow();
 
     Returns the date one week from now. `Source <https://phpf1.com/snippet/get-same-day-in-the-next-week-in-php>`_
 
